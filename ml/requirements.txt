@@ -1,7 +1,8 @@
 torch
 torchvision
 numpy
-python-opencv
+opencv-python
 scikit-image
 python-socketio
 python-socketio[client]
+pycocotools

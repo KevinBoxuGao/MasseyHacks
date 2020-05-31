@@ -1,0 +1,7 @@
+torch
+torchvision
+numpy
+python-opencv
+scikit-image
+python-socketio
+python-socketio[client]

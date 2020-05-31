@@ -3,14 +3,15 @@ import torch.nn as nn
 import numpy as np
 
 import gnupg
-import aiohttp
-import socketio
 import asyncio
+import socketio
+from aiohttp import web
 
 import cv2
 import base64
 import re
 from PIL import Image
+from io import BytesIO
 
 # TODO: Edit takeoff_status event callback to communicate with drone(s).
 # TODO: Draw bounding boxes on images and save them to outs.
@@ -32,7 +33,7 @@ retinanet.eval()
 
 
 # Server to connect with drone(s).
-app = aiohttp.web.Application()
+app = web.Application()
 server_io = socketio.AsyncServer(async_mode = "aiohttp")
 server_io.attach(app)
 
@@ -68,9 +69,8 @@ async def send_data(sid, data):
     alt, lat, long, b64_img = data
 
     #b64_img = re.sub('^data:image/.+;base64,', '', b64_img) <-- This might be needed if there's a "data:image/<filetype>;base64" header.
-    img = np.array(Image.open(io.BytesIO(base64.b64decode(b64_img))))
-    img = cv2.resize(img, (600, 600))
-    img = torch.Tensor(img)
+    img = np.array(Image.open(BytesIO(base64.b64decode(b64_img))))
+    img = torch.Tensor(cv2.resize(img, (608, 608)))
 
     if ON_CUDA:
         img = img.cuda()
@@ -82,12 +82,12 @@ async def send_data(sid, data):
     n_ppl = np.where(scores.cpu() > 0.5)[0].shape[0]
 
     io.emit("logdata", [alt, lat, long, n_ppl])
-    await server_io.emit("status", ":ogged " + str([alt, lat, long, n_ppl]), room = sid)
+    await server_io.emit("status", "Logged " + str([alt, lat, long, n_ppl]), room = sid)
 
 
 # Random landing page.
 async def index(req):
-    return aiohttp.web.Response(text = "<h1>no</h1>", content_type = "text/html")
+    return web.Response(text = "<h1>no</h1>", content_type = "text/html")
 
 
 # Authenticate with backend server.
@@ -98,4 +98,5 @@ io.emit("authenticate", str(gpg.sign("auth")))
 
 # Run app.
 app.router.add_get('/', index)
+web.run_app(app)
 aiohttp.web.run_app(app)

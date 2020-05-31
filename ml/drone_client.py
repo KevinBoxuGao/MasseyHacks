@@ -8,7 +8,7 @@ import time
 import os
 
 EXIF_GPSINFO_ID = 34853
-MLSERVER_HOTNAME = "localhost"
+MLSERVER_HOTNAME = "http://localhost:8080/"
 
 def get_exif(file):
     img = Image.open(file)
@@ -43,11 +43,11 @@ def get_coords(geotags):
     return (lat, long)
 
 
-io = socketio.AsyncClient()
-await io.connect(MLSERVER_HOTNAME)
+io = socketio.Client()
+io.connect(MLSERVER_HOTNAME)
 
 @io.on("status")
-async def status(msg):
+def status(msg):
     print(msg)
 
 for folder in os.listdir("img/"):

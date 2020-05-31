@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="292d2ab0-e324-4c38-b39a-de7dacd8ccab" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cduYHgzaZjjsEO3JcLVdldW8XS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Android-FPVDemo-master/FPVDemo" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1590870906558" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="292d2ab0-e324-4c38-b39a-de7dacd8ccab" name="Default Changelist" comment="" />
+      <created>1590870837282</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590870837282</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1387" y="591" width="1200" height="1056" key="#Project_Structure" timestamp="1590871277760">
+      <screen x="144" y="54" width="3696" height="2106" />
+    </state>
+    <state x="1387" y="591" width="1200" height="1056" key="#Project_Structure/144.54.3696.2106@144.54.3696.2106" timestamp="1590871277760" />
+    <state x="1434" y="692" width="1115" height="867" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590871898183">
+      <screen x="144" y="54" width="3696" height="2106" />
+    </state>
+    <state x="1434" y="692" width="1115" height="867" key="#com.intellij.execution.impl.EditConfigurationsDialog/144.54.3696.2106@144.54.3696.2106" timestamp="1590871898183" />
+    <state x="1663" y="722" width="648" height="774" key="FileChooserDialogImpl" timestamp="1590884887380">
+      <screen x="144" y="54" width="3696" height="2106" />
+    </state>
+    <state x="1663" y="722" width="648" height="774" key="FileChooserDialogImpl/144.54.3696.2106@144.54.3696.2106" timestamp="1590884887380" />
+    <state x="1510" y="832" key="com.intellij.ide.util.TipDialog" timestamp="1590884743663">
+      <screen x="144" y="54" width="3696" height="2106" />
+    </state>
+    <state x="1510" y="832" key="com.intellij.ide.util.TipDialog/144.54.3696.2106@144.54.3696.2106" timestamp="1590884743663" />
+  </component>
+</project>

@@ -1,2 +1,5 @@
 */__pycache__
-ml/models
+*/*/__pycache__
+ml/privkey
+ml/model
+.idea

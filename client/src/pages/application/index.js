@@ -4,7 +4,7 @@ import "./Application.scss";
 
 import socketIOClient from "socket.io-client";
 const ENDPOINT = "https://covmapsbackend--cristianbicheru.repl.co";
-const apiKey = "AIzaSyDZZ6_8QL9VEGDUxcqMySo5csDUz2qji5g";
+const apiKey = "";
 import {
   AppBar,
   Toolbar,

@@ -69,7 +69,8 @@ async def send_data(sid, data):
 
     #b64_img = re.sub('^data:image/.+;base64,', '', b64_img) <-- This might be needed if there's a "data:image/<filetype>;base64" header.
     img = np.array(Image.open(io.BytesIO(base64.b64decode(b64_img))))
-    #img = torch.Tensor(cv2.resize(img, (600, 600))) <-- Uncomment this if image isn't resized in Java.
+    img = cv2.resize(img, (600, 600))
+    img = torch.Tensor(img)
 
     if ON_CUDA:
         img = img.cuda()

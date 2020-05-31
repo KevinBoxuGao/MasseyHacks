@@ -5,4 +5,5 @@ IMAGE_DIM = (600, 600)
 
 # CONSTANTS
 LABELS_PATH = "/home/aryan/Desktop/Datasets/semantic_drone_dataset/training_set/gt/bounding_box/bounding_boxes/person/imgIdToBBoxArray.p"
-IMAGES_PATH = "/home/aryan/Desktop/Datasets/semantic_drone_dataset/training_set/images/"
+RAW_IMAGES_PATH = "/home/aryan/Desktop/Datasets/semantic_drone_dataset/training_set/images/"
+IMAGES_PATH = "/home/aryan/Desktop/Datasets/semantic_drone_dataset/training_set/resized_images/"

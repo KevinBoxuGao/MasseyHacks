@@ -1,9 +1,20 @@
 import numpy as np
 import os
+import cv2
 import pickle
 from constants import *
 
 
+# Resize images to size IMAGE_DIM.
+os.makedirs(IMAGES_PATH)
+for file in os.listdir(RAW_IMAGES_PATH):
+    img = cv2.imread(RAW_IMAGES_PATH + file)
+    img = cv2.resize(img, IMAGE_DIM)
+    cv2.imwrite(IMAGES_PATH + file, img)
+    print(file + " resized from 6000x4000 to " + str(IMAGE_DIM[0]) + "x" + str(IMAGE_DIM[1]) + ".")
+
+
+# Write annotations into csv files.
 with open(LABELS_PATH, "rb") as rf:
     bboxes = pickle.load(rf)
 
@@ -18,6 +29,7 @@ with open("data/train.csv", "w") as wf:
 
             row = [IMAGES_PATH + img] + bbox + ["pedestrian"]
             wf.write(",".join(row) + "\n")
+        print(img + " annotated.")
 
 
 with open("data/val.csv", "w") as wf:
@@ -30,3 +42,4 @@ with open("data/val.csv", "w") as wf:
 
             row = [IMAGES_PATH + img] + bbox + ["pedestrian"]
             wf.write(",".join(row) + "\n")
+        print(img + " annotated.")
